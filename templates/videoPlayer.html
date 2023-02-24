@@ -47,6 +47,12 @@
         console.log(url);
         var loadUrl = document.querySelector("p");
         console.log("outside");
+        
+        document.addEventListener("visibilitychange", function (event) {
+          if (document.hidden) {
+             player.pause();
+          }
+        });
 
         function loadvid() {
             console.log("inside");
